@@ -1,0 +1,14 @@
+<mat-form-field appearance="fill">
+    <mat-label>Choose Country</mat-label>
+    <mat-select [(value)]="selected" (selectionChange)="changeCountry($event.value)">
+      <mat-option [value]="option.value" *ngFor="let option of country">{{ option.viewValue }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-card *ngFor="let artist of response?.topartists?.artist" class="card-container">
+    <button mat-button>
+    <mat-card-header>
+      <img mat-card-avatar src="{{artist?.image![4]['#text']}}">
+      <mat-card-title (click)="getDetails(artist.mbid)" >{{artist.name}}</mat-card-title>
+    </mat-card-header>  
+  </button>
+  </mat-card> 

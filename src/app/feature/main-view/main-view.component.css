@@ -1,0 +1,19 @@
+.card-container {
+    /*  not needed styles to reflect it */ 
+    background: none;
+    padding: 10px;
+    color: black;
+    width: 300px;
+  
+    /* needed styles below */
+    display: flex;
+    justify-content: space-between;
+  }
+  
+    .example-header-image {
+      background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+      background-size: cover;
+    }
+    .example-card {
+      max-width: 200px;
+    }

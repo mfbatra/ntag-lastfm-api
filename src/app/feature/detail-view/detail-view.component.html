@@ -1,0 +1,28 @@
+
+<mat-card class="example-card">
+  <mat-card-header fxLayout fxLayoutAlign="start center">
+<!--     <img mat-card-avatar src="{{artist?.image![0]['#text']}}">
+ -->    <mat-card-title>{{artist?.name}}</mat-card-title>
+      <mat-card-subtitle>listeners: {{artist?.stats?.listeners}}</mat-card-subtitle>
+      <mat-card-subtitle>plays: {{artist?.stats?.playcount}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <div></div>
+    <h1 >Tracks</h1>
+
+    <mat-card-title-group *ngFor="let track of tracks?.toptracks?.track">
+      <mat-card-title>{{track.name}}</mat-card-title>
+      <mat-card-subtitle>play count:{{track.playcount}}</mat-card-subtitle>
+      <img mat-card-sm-image src="{{track.image[3]['#text']}}" >
+      
+    </mat-card-title-group>
+    <div></div>
+
+    <h1 >Albums</h1>
+    <mat-card-title-group  *ngFor="let album of response?.topalbums?.album">
+      
+      <mat-card-title>{{album.name}} </mat-card-title>
+      <mat-card-subtitle>play count:{{album.playcount}} </mat-card-subtitle>
+      <img mat-card-sm-image src="{{album.image[3]['#text']}}}" >
+    </mat-card-title-group>
+  </mat-card>
